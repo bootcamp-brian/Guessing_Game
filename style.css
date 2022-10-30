@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: default;
+    min-height: 260px;
+}
+
+li {
+    list-style: none;
+}
+
+header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-grow: 0;
+    padding-top: 1vh;
+}
+
+#title {
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-size: 5vw;
+    font-family: 'Bungee', cursive;
+    white-space: nowrap;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    line-height: 5vw;
+}
+
+#guesses {
+    flex-grow: 0;
+}
+
+#submission {
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5vh;
+    position: relative;
+}
+
+#number {
+    width: 23vw;
+    height: 13vw;
+    font-size: 5vw;
+    border: none;
+    background-image: url(images/chalkboard.jpg);
+    background-size: 100%;
+    text-align: center;
+    border-radius: 2%;
+    color: white;
+}
+
+#submitButton {
+    width: 14vw;
+    font-family: Bungee, cursive;
+    font-size: 1vw;
+    line-height: 2vw;
+    background: limegreen;
+    color: white;
+    border-style: outset;
+    border-color: lime;
+    border-radius: 25px;
+}
+
+input:focus {
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+#hints, #guesses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+}
+
+h2 {
+    font-size: 3vw;
+    line-height: 3vw;
+    font-family: 'Bungee', cursive;
+    text-shadow: 2px 2px 4px black;
+    padding-bottom: 2vh;
+}
+
+.guessHeader {
+    color: white;
+}
+
+.hintsHeader {
+    color: rgb(255, 202, 24);
+}
+
+.hintboxes, .guessBoxes {
+    display: flex;
+    align-items: center;
+}
+
+.hintbox, .guessBox {
+    height: 10vw;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hintbox {
+    background-image: url(images/hintbox.png);
+    background-size: cover;
+}
+
+.hint {
+    text-align: center;
+    width: 10vw;
+    font-size: 1.5vw;
+    line-height: 2vw;
+    font-family: 'Lalezar', cursive;
+    color: rgb(255, 202, 24);
+}
+
+.guessBox {
+    background-image: url(images/guessBox.png);
+    background-size: cover;
+    font-size: 3vw;
+    font-family: 'Lalezar', cursive;
+    padding-top: 0.5%;
+}
+
+.highLow {
+    height: 5vw;
+    width: 5vw;
+    color: lime;
+    text-align: center;
+    font-size: 4vw;
+    text-shadow: 2px 2px 4px black;
+}
+
+.resultsScreen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: black;
+    min-height: 900px;
+}
+
+.win {
+    background-image: url(images/balloons.jpg);
+    background-size: cover;
+}
+
+
+#winMessage, #loseMessage {
+    color: white;
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    padding-top: 30vh;
+    text-shadow: 2px 2px 4px black;
+}
+
+#winMessage {
+    font-size: 5vw;
+    line-height: 5vw;
+}
+
+#loseMessage {
+    font-size: 10vw;
+    line-height: 10vw;
+}
+
+.resultsScreen p {
+    color: white;
+    text-align: center;
+    font-family: 'Lalezar', cursive;
+    font-size: 4vw;
+    text-shadow: 2px 2px 4px black;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.yes, .no {
+    width: 10vw;
+    font-family: Bungee, cursive;
+    font-size: 1vw;
+    line-height: 2vw;
+    color: white;
+    border-style: outset;
+    border-radius: 25px;
+}
+
+.yes {
+    background: limegreen;
+    border-color: lime;
+}
+
+.no {
+    background: red;
+    border-color: orangered;
+}
+
+.reset {
+    position: absolute;
+    width: 14vw;
+    font-family: Bungee, cursive;
+    font-size: 3vw;
+    line-height: 5vw;
+    background: red;
+    color: white;
+    border-style: outset;
+    border-color: orangered;
+    border-radius: 25px;
+    top: 23%;
+}
+
+.yes:hover, .no:hover, .reset:hover, .hintbox:hover, #submitButton:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+/* 
+@media (max-width: 1200px) {
+    .highLow {
+        line-height: 6vw;
+    }
+}
+@media (max-width: 800px) {
+    .highLow {
+        line-height: 8vw;
+    }
+}
+@media (max-width: 600px) {
+    .highLow {
+        line-height: 10vw;
+    }
+}@media (max-width: 500px) {
+    .highLow {
+        line-height: 11vw;
+    }
+} */
